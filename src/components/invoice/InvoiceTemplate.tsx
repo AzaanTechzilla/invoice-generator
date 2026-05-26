@@ -2,8 +2,8 @@
 
 import { InvoiceData } from "@/context/InvoiceContext";
 import { formatCurrency, calculateSubtotal, calculateGrandTotal } from "@/lib/utils";
-import GogoLogo from "./GogoLogo";
-import Taxi6Logo from "./Taxi6Logo";
+import Taxilogo from "../images/logo1.png";
+import GOgologo from "../images/logo2.png";
 import OrnamentDivider from "./OrnamentDivider";
 import InvoiceRow from "./InvoiceRow";
 import {
@@ -20,6 +20,7 @@ import {
   FiHash,
 } from "react-icons/fi";
 import { MdLocalTaxi } from "react-icons/md";
+import Image from "next/image";
 
 interface InvoiceTemplateProps {
   data: InvoiceData;
@@ -34,7 +35,7 @@ export default function InvoiceTemplate({ data }: InvoiceTemplateProps) {
       id="invoice-page"
       className="relative bg-white overflow-hidden"
       style={{
-        width: "210mm",
+        // width: "210mm",
         minHeight: "297mm",
         fontFamily: "'Segoe UI', system-ui, sans-serif",
         fontSize: "11px",
@@ -85,7 +86,7 @@ export default function InvoiceTemplate({ data }: InvoiceTemplateProps) {
         {/* ── HEADER ─────────────────────────────────────── */}
         <header className="flex items-center justify-between mb-1">
           {/* Left Logo */}
-          <GogoLogo size={88} />
+          <Image src={GOgologo} alt="GOGO UG" width={88} height={88} />
 
           {/* Center brand */}
           <div className="text-center flex-1 px-4">
@@ -114,7 +115,7 @@ export default function InvoiceTemplate({ data }: InvoiceTemplateProps) {
           </div>
 
           {/* Right Logo */}
-          <Taxi6Logo size={88} />
+            <Image src={Taxilogo} alt="GOGO UG" width={88} height={88} />
         </header>
 
         {/* ── Thick gold border line ──────────────────────── */}
