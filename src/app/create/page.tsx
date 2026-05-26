@@ -60,7 +60,7 @@ export default function CreatePage() {
   const handleSubmit = () => {
     if (!validate()) return;
     const id = uuidv4();
-    const invoice: InvoiceData = { id, ...form, items };
+    const invoice: InvoiceData = { id, ...form, items, clientAddress: `${form.clientStreet}, ${form.clientCity}`, };
     addInvoice(invoice);
     router.push(`/invoice/${id}`);
   };
