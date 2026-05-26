@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gogo-green: #1a5c2a;
+  --gogo-dark: #0d3318;
+  --gogo-gold: #c8a000;
+  --gogo-gold-light: #e8c840;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+/* ─── Invoice Print Styles ─────────────────────────────── */
+@media print {
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  #invoice-page {
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}
+
+/* ─── Corner Decorations ───────────────────────────────── */
+.corner-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #c8a000 0%, #e8c840 50%, transparent 50%);
+  opacity: 0.15;
+  border-radius: 0 0 100% 0;
+}
+
+.corner-br {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(315deg, #c8a000 0%, #e8c840 50%, transparent 50%);
+  opacity: 0.15;
+  border-radius: 100% 0 0 0;
+}
+
+/* ─── Gold Divider ─────────────────────────────────────── */
+.gold-divider {
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #c8a000 20%,
+    #e8c840 50%,
+    #c8a000 80%,
+    transparent
+  );
+}
+
+/* ─── Dotted separator ─────────────────────────────────── */
+.dotted-sep {
+  border-top: 2px dashed #d1d5db;
+}
+
+/* ─── Icon Circle ──────────────────────────────────────── */
+.icon-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--gogo-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
