@@ -157,11 +157,11 @@ export default function CreatePage() {
         <section className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
           <h2 className="font-black text-[#1a5c2a] text-sm tracking-widest uppercase mb-4 flex items-center gap-2">
             <span className="w-1 h-4 bg-[#c8a000] rounded-full" />
-            Patientendaten
+            Kundendaten
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="patientName">Patient (Name, Vorname)</Label>
+              <Label htmlFor="patientName">Vorname</Label>
               <Input
                 id="patientName"
                 value={form.patientName}
@@ -181,7 +181,7 @@ export default function CreatePage() {
               />
             </div>
             <div className="md:col-span-2">
-              <Label htmlFor="patientAddress">Adresse des Patienten</Label>
+              <Label htmlFor="patientAddress">Adresse</Label>
               <Input
                 id="patientAddress"
                 value={form.patientAddress}
