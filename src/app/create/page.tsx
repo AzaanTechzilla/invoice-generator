@@ -161,7 +161,7 @@ export default function CreatePage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="patientName">Vorname</Label>
+              <Label htmlFor="patientName">Kundenname</Label>
               <Input
                 id="patientName"
                 value={form.patientName}
